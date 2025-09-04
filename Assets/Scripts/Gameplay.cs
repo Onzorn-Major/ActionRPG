@@ -12,13 +12,20 @@ public class Character
         name = n;
         hp = h;
     }
+
+
+    public void ReceiveDamage(int damage) //method
+    {
+        hp -= damage;
+        if (hp < 0) hp = 0;
+    }
 }
 
 public class Gameplay : MonoBehaviour
 {
-    TextMeshProUGUI playerName;
-    Image hpBar;
-    Character player;
+    public TextMeshProUGUI playerName;
+    public Image hpBar;
+    public Character player;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
