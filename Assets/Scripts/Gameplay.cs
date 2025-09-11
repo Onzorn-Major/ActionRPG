@@ -27,7 +27,6 @@ public class Gameplay : MonoBehaviour
     public Image hpBar;
     public Character player;
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,9 +40,6 @@ public class Gameplay : MonoBehaviour
     void Update()
     {
         hpBar.fillAmount = (float)player.hp / 100f;
-        //ggwp
+    //Warodome Boss
     }
-
-    //ทดสอบ
-    //Auto 55555555555555
 }
