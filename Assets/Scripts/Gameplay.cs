@@ -41,5 +41,6 @@ public class Gameplay : MonoBehaviour
     void Update()
     {
         hpBar.fillAmount = (float)player.hp / 100f;
+        //ggwp
     }
 }
