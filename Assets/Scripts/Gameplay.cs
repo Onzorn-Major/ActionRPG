@@ -35,7 +35,7 @@ public class Gameplay : MonoBehaviour
         hpBar = GameObject.Find("HP").GetComponent<Image>();
         playerName.text = player.name;
     }
-
+    // Õ–√Ÿ‰¡Ë‰√È
     // Update is called once per frame
     void Update()
     {
