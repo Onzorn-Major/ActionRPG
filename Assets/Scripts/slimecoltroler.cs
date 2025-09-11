@@ -14,6 +14,7 @@ public class slimecoltroler : MonoBehaviour
     Animator amin;
     bool isPlayerIngRage = false;
     bool hasReachePlayer = false;
+    //bhjgvbjbgjvjjg
 
     void Start()
     {
