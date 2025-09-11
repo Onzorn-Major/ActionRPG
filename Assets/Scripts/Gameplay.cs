@@ -43,4 +43,5 @@ public class Gameplay : MonoBehaviour
     }
 
     //ทดสอบ
+    //Auto 55555555555555
 }
