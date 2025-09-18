@@ -43,3 +43,4 @@ public class Gameplay : MonoBehaviour
     //Warodome Boss
     }
 }
+// ¢Õ‚∑…§—∫ º¡∑”‚ª√‡®§æ—ß
