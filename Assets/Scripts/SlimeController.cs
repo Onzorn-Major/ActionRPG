@@ -19,7 +19,7 @@ public class SlimeController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
     }
-    // Update is called once per frame
+  
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
@@ -65,3 +65,4 @@ public class SlimeController : MonoBehaviour
         anim.SetBool("Attack", !hasReachePlayer);
     }
 }
+//รักCEOที่สุดในโยก
