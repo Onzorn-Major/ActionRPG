@@ -92,6 +92,6 @@ public class slimecoltroler : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
+        //เลือดลด20หน่วยครับ
     }
 }
