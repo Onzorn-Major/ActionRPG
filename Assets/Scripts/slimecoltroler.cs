@@ -2,11 +2,19 @@ using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class slimecoltroler : MonoBehaviour
 {
+    public Image hpBar;
+    public float hp = 100f;
+
     NavMeshAgent agent;
     public GameObject player;
+
+    AudioSource audioSource;
+    public AudioClip slash1;
 
     public float stopDistance = 1f;
     public float detectionRange = 10f;
@@ -45,6 +53,8 @@ public class slimecoltroler : MonoBehaviour
             StopMoving();
 
         }
+        UpdateAnimetions();
+        UpdateUI();
     }
     void MoveToPlayer()
     {
@@ -65,5 +75,19 @@ public class slimecoltroler : MonoBehaviour
     void UpdateAnimetions()
     {
         amin.SetBool("Attack", hasReachePlayer);
+    }
+
+    void UpdateUI()
+    {
+        hpBar.fillAmount = (float)hp / 100f;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Sword"))
+        {
+            print("hit");
+            audioSource.PlayOneShot(slash1);
+        }
+
     }
 }
