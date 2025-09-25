@@ -1,8 +1,11 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 public class SlimeController : MonoBehaviour
 {
+    public Image hpBar;
+    public float hp = 100f;
     NavMeshAgent agent;
     public GameObject player;
     public float stopDistance = 1f;
@@ -41,7 +44,7 @@ public class SlimeController : MonoBehaviour
         {
             StopMoving();
         }
-        UpdateAnimetion();
+        UpdateUI();
     }
     void MoveToPlayer()
     {
@@ -63,5 +66,9 @@ public class SlimeController : MonoBehaviour
     void UpdateAnimetion()
     {
         anim.SetBool("Attack", !hasReachePlayer);
+    }
+    void UpdateUI()
+    {
+        hpBar.fillAmount = hp / 100f;
     }
 }
