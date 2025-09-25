@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 
 public class SlimeBasic : MonoBehaviour
 {
@@ -10,13 +11,5 @@ public class SlimeBasic : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Sword"))
-        {
-            print("hit");
-            audioSource.PlayOneShot(slash1);
-        }
 
-    }
 }
